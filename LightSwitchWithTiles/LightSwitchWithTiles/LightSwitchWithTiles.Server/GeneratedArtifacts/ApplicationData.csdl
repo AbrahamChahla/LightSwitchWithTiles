@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Screen" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="MenuTiles" Relationship="LightSwitchApplication.MenuTile_Menu" ToRole="MenuTile" FromRole="Menu" />
+  </EntityType>
+  <EntityType Name="MenuTile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Order" Type="Edm.Int32" />
+    <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Size" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Color" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="OnClick" Type="Edm.String" MaxLength="255" />
+    <Property Name="Status" Type="Edm.String" MaxLength="255" />
+    <Property Name="StatusFgColor" Type="Edm.String" MaxLength="255" />
+    <Property Name="StatusBgColor" Type="Edm.String" MaxLength="255" />
+    <Property Name="Icon" Type="Edm.String" MaxLength="255" />
+    <Property Name="IconFgColor" Type="Edm.String" MaxLength="255" />
+    <Property Name="IconBgColor" Type="Edm.String" MaxLength="255" />
+    <Property Name="Badge" Type="Edm.String" MaxLength="255" />
+    <Property Name="BadgeFgColor" Type="Edm.String" MaxLength="255" />
+    <Property Name="BadgeBgColor" Type="Edm.String" MaxLength="255" />
+    <Property Name="MenuTile_Menu" Type="Edm.Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Menu" Relationship="LightSwitchApplication.MenuTile_Menu" ToRole="Menu" FromRole="MenuTile" />
+  </EntityType>
+  <Association Name="MenuTile_Menu">
+    <End Role="Menu" Type="LightSwitchApplication.Menu" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MenuTile" Type="LightSwitchApplication.MenuTile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MenuTile">
+        <PropertyRef Name="MenuTile_Menu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ApplicationData" m:IsDefaultEntityContainer="true">
+    <EntitySet Name="Menus" EntityType="LightSwitchApplication.Menu" />
+    <EntitySet Name="MenuTiles" EntityType="LightSwitchApplication.MenuTile" />
+    <AssociationSet Name="MenuTile_Menu" Association="LightSwitchApplication.MenuTile_Menu">
+      <End Role="Menu" EntitySet="Menus" />
+      <End Role="MenuTile" EntitySet="MenuTiles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

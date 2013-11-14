@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ApplicationDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ApplicationDataStore">
+    <EntitySet Name="Menus" EntityType="ApplicationDataStore.Menu" store:Type="Tables" Schema="dbo" Table="Menus" />
+    <EntitySet Name="MenuTiles" EntityType="ApplicationDataStore.MenuTile" store:Type="Tables" Schema="dbo" Table="MenuTiles" />
+    <AssociationSet Name="MenuTile_Menu" Association="ApplicationDataStore.MenuTile_Menu">
+      <End Role="Menu" EntitySet="Menus" />
+      <End Role="MenuTile" EntitySet="MenuTiles" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Screen" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="MenuTile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Order" Type="int" />
+    <Property Name="Type" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Size" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Color" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="OnClick" Type="nvarchar" MaxLength="255" />
+    <Property Name="Status" Type="nvarchar" MaxLength="255" />
+    <Property Name="StatusFgColor" Type="nvarchar" MaxLength="255" />
+    <Property Name="StatusBgColor" Type="nvarchar" MaxLength="255" />
+    <Property Name="Icon" Type="nvarchar" MaxLength="255" />
+    <Property Name="IconFgColor" Type="nvarchar" MaxLength="255" />
+    <Property Name="IconBgColor" Type="nvarchar" MaxLength="255" />
+    <Property Name="Badge" Type="nvarchar" MaxLength="255" />
+    <Property Name="BadgeFgColor" Type="nvarchar" MaxLength="255" />
+    <Property Name="BadgeBgColor" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="MenuTile_Menu" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="MenuTile_Menu">
+    <End Role="Menu" Type="ApplicationDataStore.Menu" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MenuTile" Type="ApplicationDataStore.MenuTile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MenuTile">
+        <PropertyRef Name="MenuTile_Menu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

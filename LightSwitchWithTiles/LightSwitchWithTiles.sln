@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8D9C8A9D-5DED-4B64-BF65-B598BA549D93}") = "LightSwitchWithTiles", "LightSwitchWithTiles\LightSwitchWithTiles.lsxproj", "{4084AC80-E11E-437C-A589-3E67A3255DCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightSwitchWithTiles.Server", "LightSwitchWithTiles\LightSwitchWithTiles.Server\LightSwitchWithTiles.Server.csproj", "{6DC4F8A4-DAE7-49F1-88D1-003B37133DCE}"
+EndProject
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "LightSwitchWithTiles.HTMLClient", "LightSwitchWithTiles\LightSwitchWithTiles.HTMLClient\LightSwitchWithTiles.HTMLClient.jsproj", "{14C680E4-BD35-433E-AEFA-AEA7A1EBB992}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4084AC80-E11E-437C-A589-3E67A3255DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4084AC80-E11E-437C-A589-3E67A3255DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4084AC80-E11E-437C-A589-3E67A3255DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4084AC80-E11E-437C-A589-3E67A3255DCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DC4F8A4-DAE7-49F1-88D1-003B37133DCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DC4F8A4-DAE7-49F1-88D1-003B37133DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DC4F8A4-DAE7-49F1-88D1-003B37133DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DC4F8A4-DAE7-49F1-88D1-003B37133DCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14C680E4-BD35-433E-AEFA-AEA7A1EBB992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14C680E4-BD35-433E-AEFA-AEA7A1EBB992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14C680E4-BD35-433E-AEFA-AEA7A1EBB992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14C680E4-BD35-433E-AEFA-AEA7A1EBB992}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
