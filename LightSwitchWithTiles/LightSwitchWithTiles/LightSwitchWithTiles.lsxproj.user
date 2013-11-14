@@ -4,7 +4,7 @@
     <EnableENC>False</EnableENC>
     <ProjectView>ProjectFiles</ProjectView>
     <StartUpClientProject>LightSwitchWithTiles.HTMLClient</StartUpClientProject>
-    <SchemaManagementLastSsdlWriteTime>635199863797248760</SchemaManagementLastSsdlWriteTime>
+    <SchemaManagementLastSsdlWriteTime>635200415755771652</SchemaManagementLastSsdlWriteTime>
     <SchemaManagementSchemaBuildState>0</SchemaManagementSchemaBuildState>
   </PropertyGroup>
 </Project>

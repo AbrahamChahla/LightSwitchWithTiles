@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Documents>
-    <Document FullPath="c:\Users\Dale\Documents\Visual Studio 2013\Projects\LightSwitchWithTiles\LightSwitchWithTiles\LightSwitchWithTiles.Server\DataSources\ApplicationData\Menus.lsml" Checksum="D1DC8F2AD40AF802FAF4A845A128B3CFB5990AC03352C20B8800F0BCFFAEB37D" />
-    <Document FullPath="c:\Users\Dale\Documents\Visual Studio 2013\Projects\LightSwitchWithTiles\LightSwitchWithTiles\LightSwitchWithTiles.Server\DataSources\ApplicationData\MenuTiles.lsml" Checksum="32CEBAB08B5A34110066AE4A55E1120CB4E5EB3D09C3EC8FD69A64DD26525C40" />
-    <Document FullPath="c:\Users\Dale\Documents\Visual Studio 2013\Projects\LightSwitchWithTiles\LightSwitchWithTiles\LightSwitchWithTiles.Server\DataSources\ApplicationData\TilesForMenu.lsml" Checksum="BA1A524FCD76D88CF560A1AAD1974110B65FF0077F8518F88B69B618A61FC83B" />
-    <Document FullPath="c:\Users\Dale\Documents\Visual Studio 2013\Projects\LightSwitchWithTiles\LightSwitchWithTiles\LightSwitchWithTiles.Server\Properties\DataSources\ApplicationData.lsml" Checksum="4269B7A1C607D3AEA1D34BA816EE24BE223A014F83A97F863157835AA09C6154" />
-    <Document FullPath="c:\Users\Dale\Documents\Visual Studio 2013\Projects\LightSwitchWithTiles\LightSwitchWithTiles\LightSwitchWithTiles.Server\Properties\Service.lsml" Checksum="679C78F29C5AF23E9956A773B0E46DF90F7B86CADA0B79571E5896A1C79F5B70" />
+    <Document FullPath="C:\Users\Dale\Documents\GitHub\LightSwitchWithTiles\LightSwitchWithTiles\LightSwitchWithTiles\LightSwitchWithTiles.Server\DataSources\ApplicationData\Menus.lsml" Checksum="D1DC8F2AD40AF802FAF4A845A128B3CFB5990AC03352C20B8800F0BCFFAEB37D" />
+    <Document FullPath="C:\Users\Dale\Documents\GitHub\LightSwitchWithTiles\LightSwitchWithTiles\LightSwitchWithTiles\LightSwitchWithTiles.Server\DataSources\ApplicationData\MenuTiles.lsml" Checksum="32CEBAB08B5A34110066AE4A55E1120CB4E5EB3D09C3EC8FD69A64DD26525C40" />
+    <Document FullPath="C:\Users\Dale\Documents\GitHub\LightSwitchWithTiles\LightSwitchWithTiles\LightSwitchWithTiles\LightSwitchWithTiles.Server\DataSources\ApplicationData\TilesForMenu.lsml" Checksum="BA1A524FCD76D88CF560A1AAD1974110B65FF0077F8518F88B69B618A61FC83B" />
+    <Document FullPath="C:\Users\Dale\Documents\GitHub\LightSwitchWithTiles\LightSwitchWithTiles\LightSwitchWithTiles\LightSwitchWithTiles.Server\Properties\DataSources\ApplicationData.lsml" Checksum="4269B7A1C607D3AEA1D34BA816EE24BE223A014F83A97F863157835AA09C6154" />
+    <Document FullPath="C:\Users\Dale\Documents\GitHub\LightSwitchWithTiles\LightSwitchWithTiles\LightSwitchWithTiles\LightSwitchWithTiles.Server\Properties\Service.lsml" Checksum="679C78F29C5AF23E9956A773B0E46DF90F7B86CADA0B79571E5896A1C79F5B70" />
   </Documents>
 </ModelDocumentManifest>
